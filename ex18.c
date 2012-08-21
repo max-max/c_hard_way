@@ -66,7 +66,7 @@ void test_sorting(int *numbers, int count, compare_cb cmp)
 	if(!sorted) die("Failed to sort as requested!\n");
 
 	for(i = 0; i < count; i++) {
-		printf("Sorted: %d ", sorted[i]);
+		printf("%d ", sorted[i]);
 	}
 	printf("\n");
 
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 	int count = argc - 1;
 	int i = 0;
 	char **inputs = argv + 1;
-	int * numbers = malloc(count * sizeof(int));
+	int *numbers = malloc(count * sizeof(int));
 	if(!numbers) die("Unable to allocate memory!\n");
 
 	for(i = 0; i < count; i++) {
